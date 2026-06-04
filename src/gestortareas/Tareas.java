@@ -113,7 +113,7 @@ public class Tareas{
         lista.set(numero - 1, tarea);
         guardarTareas(lista);
  
-        String nombre = tarea.replace("[x] ", "");
+        String nombre = tarea.replace("[✓] ", "");
         System.out.println("\nTarea #" + numero + " completada: " + nombre);
     }
 }
