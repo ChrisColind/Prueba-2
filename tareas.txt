@@ -1,0 +1,4 @@
+[x] tarea calculo
+[ ] tarea algebra liuneal
+[✓] calc
+[ ] lineal
