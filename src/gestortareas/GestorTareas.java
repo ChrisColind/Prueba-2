@@ -19,7 +19,7 @@ public class GestorTareas{
  
         do{
             System.out.println("\nGESTOR DE TAREAS");
-            System.out.println("=================");
+            System.out.println("================");
             System.out.println("1. Agregar tarea");
             System.out.println("2. Mostrar tareas");
             System.out.println("3. Completar tareas");
@@ -39,14 +39,18 @@ public class GestorTareas{
                     Tareas.mostrarTareas();
  
                 }else if(opcion == 3){
-                    Tareas.mostrarTareas();
-                    System.out.print("Elija la tarea para completar: ");
-                    int numero = n.nextInt();
-                    n.nextLine();
-                    Tareas.completarTarea(numero);
+                    if(Tareas.leerTareas().isEmpty()){
+                        System.out.println("No hay tareas para completar.");
+                    }else{
+                        Tareas.mostrarTareas();
+                        System.out.print("Elija la tarea para completar: ");
+                        int numero = n.nextInt();
+                        n.nextLine();
+                        Tareas.completarTarea(numero);
+                    }
  
                 }else if(opcion!=4){
-                    
+ 
                 }
  
             }catch(Exception e){
