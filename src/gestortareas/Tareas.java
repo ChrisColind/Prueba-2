@@ -16,9 +16,9 @@ import java.util.ArrayList;
  */
 public class Tareas{
  
-    static String archivo = "tareas.txt";
+    public static String archivo = "tareas.txt";
  
-    static ArrayList<String> leerTareas(){
+    public static ArrayList<String> leerTareas(){
         ArrayList<String> lista = new ArrayList<>();
  
         File a = new File(archivo);
@@ -56,7 +56,7 @@ public class Tareas{
         return lista;
     }
  
-    static void guardarTareas(ArrayList<String> lista) {
+    public static void guardarTareas(ArrayList<String> lista) {
         try {
             FileWriter fw = new FileWriter(archivo, false);
  
@@ -71,14 +71,14 @@ public class Tareas{
         }
     }
  
-    static void agregarTarea(String nombre) {
+    public static void agregarTarea(String nombre) {
         ArrayList<String> lista = leerTareas();
         lista.add("[ ] " + nombre);
         guardarTareas(lista);
         System.out.println("\nTarea agregada: " + nombre);
     }
  
-    static void mostrarTareas() {
+    public static void mostrarTareas() {
         ArrayList<String> lista = leerTareas();
  
         System.out.println("\nLISTA DE TAREAS");
@@ -94,7 +94,7 @@ public class Tareas{
         }
     }
  
-    static void completarTarea(int numero) {
+    public static void completarTarea(int numero) {
         ArrayList<String> lista = leerTareas();
  
         if (numero < 1 || numero > lista.size()) {
